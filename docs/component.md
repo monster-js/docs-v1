@@ -9,12 +9,10 @@ Components are the most basic building block of an application.
 It is composed of template, logic and styles.
 It is used to split the UI into small and reusable pieces of codes.
 
-## Structure
-
-### Logic and template
+## Logic and template
 
 The logic and the template is combined in a single file.
-It is a typescript class that has a `@Component` decorator and a `render()` method that returns a jsx elements.
+It is a typescript class that has a `@Component` decorator and a `render()` method that returns a jsx element.
 
 ```typescript
 import { Component } from '@monster-js/core';
@@ -42,7 +40,7 @@ export class CustomButton {
     }
 }
 ```
-### Styles
+## Styles
 
 MonsterJS uses `sass` by default but we can also use other css frameworks depending on our webpack configuration.
 This styles will only affect it's component and will have no effect on it's parent and child components.
