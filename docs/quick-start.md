@@ -6,7 +6,7 @@ slug: /quick-start
 ---
 
 There are many ways to setup a MonsterJS project.
-One way is to use the [CLI](cli-installation.md) but the easiest way is to clone the starter app from [GitHub](https://github.com/monster-js/starter-app).
+One way is to use the [CLI](./cli-what-is-cli) but the easiest way is to clone the starter app from [GitHub](https://github.com/monster-js/starter-app).
 
 ## Create app
 

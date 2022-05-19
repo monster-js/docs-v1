@@ -141,7 +141,7 @@ Components must be registered to one module only.
 
 Components must be registered to one module only.
 If we want to use the component inside other module, we just need to export the component from it's module and import it's module to the one that needs the component.
-Please see [Module](./module) for more information about exporting a component from it's module.
+Please see [Module](./module#register-components) for more information about exporting a component from it's module.
 
 ## Render a component into view
 
@@ -205,7 +205,7 @@ export class Greeting {
 
 Directives can also be registered in a module so that it will be available to all the components registered in the module.
 
-Please see [Module](./module) for more information about registering directives into a module.
+Please see [Module](./module#register-directives) for more information about registering directives into a module.
 
 ## Component pipes
 
@@ -261,6 +261,12 @@ export class Greeting {
 Pipes can also be registered in a module so that it will be available to all the components registered in the module.
 
 Please see [Module](./module) for more information about registering pipes into a module.
+
+:::node
+Template pipes may throw a typescript type checking error since the pipe operator is originally an arithmetic operator that accepts any, number and bigint values.
+A temporary fix for this is to set our values to type any.
+This error will be addressed in later releases.
+:::
 
 ## component services
 

@@ -54,6 +54,12 @@ Ex.
 
 In the example above, the `lowercase` is the pipe.
 
+:::node
+Template pipes may throw a typescript type checking error since the pipe operator is originally an arithmetic operator that accepts any, number and bigint values.
+A temporary fix for this is to set our values to type any.
+This error will be addressed in later releases.
+:::
+
 Template pipes can also be chained to another pipe.
 
 Ex.
