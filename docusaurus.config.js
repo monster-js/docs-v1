@@ -5,7 +5,7 @@ module.exports = {
   title: 'MonsterJS',
   tagline: 'Simple but powerful javascript framework.',
   url: 'https://monsterjs.com',
-  baseUrl: '/docs/',
+  baseUrl: '/' + GITHUB_REPO + '/',
   onBrokenLinks: 'throw',
   favicon: '/img/favicon.ico',
   organizationName: GITHUB_ORG,
