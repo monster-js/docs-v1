@@ -38,42 +38,42 @@ Now we can view our app by pointing our browsers to [http://localhost:4000](http
 After the setup is complete, you can see the file structure of project in the current directory.
 
 ```
-.babelrc
-package.json
-tsconfig.json
-node_modules
 .monster
-    ├── webpack.config.js
-    └── monster.json
+    ├── monster.json
+    └── webpack.config.js
+node_modules
 src
-    ├── index.html
-    ├── index.ts
-    ├── styles.scss
+    └── app
+        ├── app.component.tsx
+        ├── app.module.ts
+        └── app.style.scss
     ├── assets
     └── environments
         ├── dev.json
         └── prod.json
-    └── app
-        ├── app.module.ts
-        ├── app.component.tsx
-        └── app.style.scss
+    ├── index.html
+    ├── index.ts
+    └── styles.scss
+.babelrc
+package.json
+tsconfig.json
 ```
-* `.babelrc`                    Configuration for babel.
-* `package.json`                All the dependencies and configurations of your project.
-* `tsconfig.json`               The typescript configuration file.
-* `node_modules/`               This is where the installed node packages are located.
 * `.monster`                    Contains the configurations needed for MonsterJS project.
-* `.monster/webpack.config.js`  The configuration for webpack module bundler.
 * `.monster/monster.json`       The configuration for MonsterJS project. Usually used by the CLI.
+* `.monster/webpack.config.js`  The configuration for webpack module bundler.
+* `node_modules/`               This is where the installed node packages are located.
 * `src/`                        A directory that contains the source code and assets of your application.
-* `src/index.html`              The main HTML page that is served when someone visits your application.
-* `src/index.ts`                The main entry point of your application. It bootstrap the root module of the entire project.
-* `src/styles.css`              Contains the global styles of the application.
+* `src/app/`                    This is where the codes related to application is located
+* `src/app/app.component.tsx`   Contains the ts codes of the root component. Any other components must be a child of this component.
+* `src/app/app.module.ts`       The root module of the application.
+* `src/app/app.styles.scss`     Contains the css codes of the root component.
 * `src/assets/`                 This is the recommended directory to put all of the asset files.
 * `src/environments/`           Contains the different environment files for the project.
 * `src/environments/dev.json`   The development environment of the project.
 * `src/environments/prod.json`  The production environment of the project.
-* `src/app/`                    This is where the codes related to application is located
-* `src/app/app.module.ts`       The root module of the application.
-* `src/app/app.component.tsx`   Contains the ts codes of the root component. Any other components must be a child of this component.
-* `src/app/app.styles.scss`     Contains the css codes of the root component.
+* `src/index.html`              The main HTML page that is served when someone visits your application.
+* `src/index.ts`                The main entry point of your application. It bootstrap the root module of the entire project.
+* `src/styles.css`              Contains the global styles of the application.
+* `.babelrc`                    Configuration for babel.
+* `package.json`                All the dependencies and configurations of your project.
+* `tsconfig.json`               The typescript configuration file.
