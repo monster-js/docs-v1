@@ -60,8 +60,10 @@ export class Greeting {
 }
 ```
 
+:::note
 In order for the component styles to work properly,
 the component and styles must have the same filename with `.component.tsx` extension for the component and `.styles.scss` extension for the styles.
+:::
 
 Ex.
 
