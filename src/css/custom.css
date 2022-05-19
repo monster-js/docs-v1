@@ -1,0 +1,306 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap";
+
+/* You can override the default Infima variables here. */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --ifm-color-primary: #42b983;
+  --ifm-color-primary-dark: #42b983;
+  --ifm-color-primary-darker: #42b983;
+  --ifm-color-primary-darkest: #42b983;
+  --ifm-color-primary-light: #42b983;
+  --ifm-color-primary-lighter: #42b983;
+  --ifm-color-primary-lightest: #42b983;
+  --ifm-code-font-size: 95%;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.markdown li {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+.menu__link.menu__link {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.menu__link.menu__link--sublist {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.mdxCodeBlock_1XEh,
+.mdxCodeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-MDXComponents- {
+  margin-top: 20px;
+}
+
+.docSidebarContainer_3_JD,
+.docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage- {
+  width: 250px!important;
+}
+
+.menu__link--sublist:after {
+  background-size: 1.2rem 2rem;
+}
+
+.navbar {
+  box-shadow: none;
+}
+
+.docusaurus-highlight-code-line {
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+h1 {
+  font-size: 2rem!important;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1.75rem!important;
+  font-weight: 500;
+}
+h4,
+h5,
+h6,
+h3 {
+  font-weight: 500;
+}
+p {
+  font-weight: 300;
+  line-height: 25.6px;
+  font-size: 14px;
+  margin: 10px 0!important;
+}
+
+th {
+  font-weight: 500!important;
+}
+td {
+  line-height: 25.6px;
+  font-size: 14px;
+  font-weight: 300!important;
+}
+
+code {
+  border-radius: 3px;
+  font-size: 12.8px;
+}
+
+.prism-code.codeBlock_3iAC,
+.prism-code.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- {
+  outline: none;
+  border-radius: 3px!important;
+}
+.codeBlockLines_b7E3,
+.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- {
+  font-size: 13px!important;
+  padding: 28px!important;
+}
+.codeBlockLines_b7E3,
+.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- span {
+  line-height: 24px!important;
+}
+.codeBlockLines_b7E3,
+.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- * {
+  font-style: normal!important;
+}
+.navbar.navbar--light.navbar--fixed-top {
+  height: 50px!important;
+}
+.navbar.navbar--light.navbar--fixed-top .navbar__brand strong,
+.navbar.navbar--light.navbar--fixed-top .navbar__item.navbar__link {
+  font-weight: 400!important;
+  font-size: 14px!important;
+}
+.pagination-nav__link * {
+  font-size: 14px;
+  font-weight: 400;
+}
+.table-of-contents__link {
+  font-size: 12px;
+  font-weight: 300;
+}
+ul li {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+}
+.footer,
+.footer .footer__title {
+  font-weight: 400;
+}
+.footer .footer__title {
+  font-size: 14px;
+}
+.footer.footer--dark a {
+  font-size: 13px;
+}
+.hero.hero--primary {
+  padding: 140px 0;
+}
+.hero.hero--primary .hero__title {
+  margin-bottom: 30px;
+  font-weight: 300;
+  font-size: 50px!important;
+}
+.hero.hero--primary .hero__subtitle {
+  font-size: 1.2rem;
+}
+.hero.hero--primary .button {
+  margin-top: 20px;
+  font-weight: 300;
+  border-radius: 100px;
+}
+
+.features_src-pages- h3 {
+  font-weight: 400;
+}
+.features_src-pages- p {
+  font-weight: 300;
+}
+.features_src-pages- {
+  padding: 70px 0 100px 0!important;
+}
+
+/* ===================================== */
+
+html[data-theme="light"] .menu__link--active:not(.menu__link--sublist) {
+  background: transparent;
+}
+html[data-theme="light"] .menu__link:hover {
+  background: transparent!important;
+}
+
+html[data-theme="light"] .menu__link.menu__link:not(.active) {
+  color: #364149;
+}
+
+html[data-theme="light"] .menu__link.menu__link--sublist {
+  color: #364149;
+}
+
+html[data-theme="light"] .docSidebarContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage- {
+  border-right: solid 1px #eceeef!important;
+}
+
+html[data-theme="light"] .navbar {
+  border-bottom: solid 1px #eceeef;
+}
+
+html[data-theme="light"] .docusaurus-highlight-code-line {
+  background-color: #f8f8f8;
+}
+
+html[data-theme="light"] code {
+  background: #f8f8f8!important;
+  color: #e96900!important;
+}
+
+html[data-theme="light"] .codeBlockLines_b7E3,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- {
+  background: #f8f8f8!important;
+}
+html[data-theme="light"] .codeBlockLines_b7E3 .token.plain,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.plain {
+  color: #2973b7;
+}
+html[data-theme="light"] .codeBlockLines_b7E3 .token.string,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.string {
+  color: #42b983!important;
+}
+html[data-theme="light"] .codeBlockLines_b7E3 .token.function,
+html[data-theme="light"] .codeBlockLines_b7E3 .token.keyword,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.function,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.keyword {
+  color: #e96900!important;
+}
+html[data-theme="light"] .codeBlockLines_b7E3 .token.operator,
+html[data-theme="light"] .codeBlockLines_b7E3 .token.property-access,
+html[data-theme="light"] .codeBlockLines_b7E3 .token.maybe-class-name,
+html[data-theme="light"] .codeBlockLines_b7E3 .token.class-name,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.operator,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.property-access,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.maybe-class-name,
+html[data-theme="light"] .codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock- .token.class-name {
+  color: #525252!important;
+}
+html[data-theme="light"] .table-of-contents.table-of-contents__left-border {
+  border-color: #eceeef;
+}
+html[data-theme="light"] .pagination-nav__link {
+  border-color: #eceeef;
+}
+html[data-theme="light"] .footer {
+  border-top: solid 1px #eceeef;
+}
+html[data-theme="light"] .footer,
+html[data-theme="light"] .footer .footer__title {
+  color: #364149;
+}
+html[data-theme="light"] .footer.footer--dark {
+  background: white;
+}
+html[data-theme="light"] .footer.footer--dark a {
+  color: #42b983;
+}
+
+html[data-theme="light"] .hero.hero--primary {
+  background: white;
+  border-bottom: solid 1px #eceeef;
+}
+html[data-theme="light"] .hero.hero--primary .hero__title {
+  color: #273849;
+}
+html[data-theme="light"] .hero.hero--primary .hero__subtitle {
+  color: #273849;
+}
+html[data-theme="light"] .hero.hero--primary .button {
+  color: white!important;
+  background: #4fc08d;
+  border: 1px solid #4fc08d;
+}
+html[data-theme="light"] .hero.hero--primary .button:hover {
+  color: #4fc08d!important;
+  background: white;
+}
+
+.sponsor-link-btn {
+  background: white;
+  border: solid #4fc08d 1px;
+  border-radius: 100px;
+  font-weight: 400;
+  color: #4fc08d!important;
+}
+.sponsor-link-btn:hover {
+  background: #4fc08d;
+  color: white!important;
+}
+
+
+
+
