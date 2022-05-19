@@ -5,7 +5,7 @@ module.exports = {
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   favicon: '/img/favicon.ico',
-  organizationName: 'munster-dev',
+  organizationName: 'monster-js',
   projectName: 'docs',
   themeConfig: {
     navbar: {
@@ -22,7 +22,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/munster-dev',
+          href: 'https://github.com/monster-js',
           label: 'GitHub',
           position: 'right',
         }
@@ -49,7 +49,7 @@ module.exports = {
             },
             {
               label: 'Discord',
-              href: 'https://discord.com/invite/munster',
+              href: 'https://discord.com/invite/monster-js',
             },
             {
               label: 'Twitter',
@@ -62,7 +62,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/munster-dev',
+              href: 'https://github.com/monster-js',
             },
           ],
         },
@@ -76,7 +76,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/munster-dev/docs/blob/master',
+          editUrl: 'https://github.com/monster-js/docs-v1/blob/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
