@@ -100,6 +100,21 @@ customElement.define(getSelector(Greeting), Greeting);
 We should only import the polyfill once. It is recommended that we import the polyfill at the top of our entry point.
 :::
 
+## Global components
+
+Components can be registered as a global component.
+Global components can be used in any components inside our application.
+
+Ex.
+
+```typescript
+import { GlobalComponents } from '@monster-js/core';
+
+const gc = new GlobalComponents();
+gc.add('app-greeting');
+```
+
+Global components needs to be registered as global components first before we define the component using `customElements.define` to avoid issues.
 
 ## Register component to a module
 
@@ -121,11 +136,11 @@ export class AppModule extends BaseModule { }
 ```
 
 :::note
-Components must be registered to a one module only.
+Components must be registered to one module only.
 :::
 
-Components must be registered to a one module only.
-If we want to use the component inside other module, we just need to export the component from it's module.
+Components must be registered to one module only.
+If we want to use the component inside other module, we just need to export the component from it's module and import it's module to the one that needs the component.
 Please see [Module](./module) for more information about exporting a component from it's module.
 
 ## Render a component into view
@@ -136,13 +151,13 @@ Ex.
 
 ```typescript
     <div>
-        <app-greetings></app-greetings>
+        <app-greeting></app-greeting>
     </div>
 ```
 or
 ```typescript
     <div>
-        <app-greetings />
+        <app-greeting />
     </div>
 ```
 
@@ -151,16 +166,17 @@ In the example above, the greeting component will be rendered in the view inside
 ## Other web components
 
 Web components that are not made using MonsterJS will also work inside a MonsterJS project.
-We just need to register the web component's selector as an external web component using `externalComponent` function found in the core package.
+We just need to register the web component's selector as a global component using `GlobalComponents` class found in the core package.
 
 Ex.
 
 ```typescript
 // src/index.ts
-import { externalComponent as ec } from '@monster-js/core';
+import { GlobalComponents } from '@monster-js/core';
 
-ec('external-web-component');
-ec('another-external-web-component');
+const gc = new GlobalComponents();
+gc.add('external-web-component');
+gc.add('another-external-web-component');
 ```
 
 It is recommended that we register the external components inside `src/index.ts` file.

@@ -32,7 +32,7 @@ import { Directive, DirectiveArgInterface } from '@monster-js/core';
 export class HighlightDirective {
     $color(arg: DirectiveArgInterface) {
         const value = arg.directive.get();
-        this.element.style.backgroundColor = value;
+        arg.element.style.backgroundColor = value;
     }
 }
 ```
@@ -49,7 +49,6 @@ interface DirectiveArgInterface {
     };
     element: HTMLElement;
     component: ComponentInstanceInterface;
-    componentWrapper: ComponentWrapperInstanceInterface;
 }
 ```
 
@@ -107,7 +106,7 @@ export class Greeting {
 
 ## Value change watcher
 
-To let our directive react when it's value is changed we can use the `createWatcher(valueCaller, element, component, updateCallback)` function from the core package.
+To let our directive react when it's value is changed we can use the `watch(valueCaller, element, component, updateCallback)` function from the core package.
 
 | Params | Description |
 | --- | --- |
@@ -120,16 +119,16 @@ Here's an example on how to change the background color of an element based on t
 
 #### The directive
 ```javascript
-import { Directive, createWatcher } from '@monster-js/core';
+import { Directive, watch } from '@monster-js/core';
 
 @Directive('highlight')
 export class HighlightDirective {
     $color(arg: DirectiveArgInterface) {
         const initialValue = arg.directive.get();
-        this.element.style.backgroundColor = initialValue;
+        arg.element.style.backgroundColor = initialValue;
 
-        createWatcher(() => arg.directive.get(), arg.element, arg.component, newValue => {
-            this.element.style.backgroundColor = newValue;
+        watch(() => arg.directive.get(), arg.element, arg.component, newValue => {
+            arg.element.style.backgroundColor = newValue;
         });
     }
 }
@@ -172,7 +171,6 @@ interface AllDirectivesArgInterface {
     }
     element: HTMLElement;
     component: ComponentInstanceInterface;
-    componentWrapper: ComponentWrapperInstanceInterface;
 }
 ```
 
