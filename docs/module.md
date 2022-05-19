@@ -7,7 +7,7 @@ slug: /module
 
 Module is a way to group components, directives, services, pipes and modules of application that are related to each other.
 This feature is very helpful in organizing the codes to make the project more maintainable as it grows in scale.
-Another cool thing for a MunsterJS module is that it is lazy loaded when used in a route.
+Another cool thing for a MonsterJS module is that it is lazy loaded when used in a route.
 
 ## Installation
 
@@ -15,11 +15,11 @@ Module is not directly available in the core package so we need to install it fi
 To install this package, we can run the following command in the root directory of our project.
 
 ```bash
-npm install @munster-dev/module
+npm install @monster-js/module
 ```
 or
 ```bash
-yarn add @munster-dev/module
+yarn add @monster-js/module
 ```
 
 ## Root component
@@ -31,7 +31,7 @@ Root component is the last component to be defined to make sure all the child co
 Ex.
 
 ```typescript
-import { Module, BaseModule } from "@munster-dev/core";
+import { Module, BaseModule } from "@monster-js/core";
 import { App } from "./app.component";
 
 @Module({
@@ -53,7 +53,7 @@ So the parent and child module needs to be registered in the module.
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { Parent } from './parent.component';
 import { Child } from './child.component';
 
@@ -78,7 +78,7 @@ we need to export the component that will be used in another module and import t
 Ex.
 #### Child module
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { Child } from './child.component';
 
 @Module({
@@ -91,7 +91,7 @@ export class ChildModule extends BaseModule { }
 
 #### Parent module
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { Parent } from './parent.component';
 import { ChildModule } from './child.module';
 
@@ -110,7 +110,7 @@ A service can be registered to any number of modules unlike components which can
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { GreetingService } from './greeting.service';
 
 @Module({
@@ -126,7 +126,7 @@ A service can also be exported from the module.
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { GreetingService } from './greeting.service';
 
 @Module({
@@ -145,7 +145,7 @@ A directive can be registered to any number of modules unlike components which c
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { HighlightDirective } from './highlight.directive';
 
 @Module({
@@ -161,7 +161,7 @@ A directive can also be exported from the module.
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { HighlightDirective } from './highlight.directive';
 
 @Module({
@@ -180,7 +180,7 @@ A pipe can be registered to any number of modules unlike components which can be
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { UppercasePipe } from './uppercase.pipe';
 
 @Module({
@@ -196,7 +196,7 @@ A pipe can also be exported from the module.
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { UppercasePipe } from './uppercase.pipe';
 
 @Module({
@@ -215,7 +215,7 @@ The purpose of this is to make the parent module to be able to use the component
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { ChildModule } from './child.module';
 
 @Module({

@@ -1,18 +1,21 @@
+const GITHUB_REPO = 'docs-v1';
+const GITHUB_ORG = 'monster-js';
+
 module.exports = {
-  title: 'MunsterJS',
+  title: 'MonsterJS',
   tagline: 'Simple but powerful javascript framework.',
-  url: 'https://munsterjs.com',
+  url: 'https://monsterjs.com',
   baseUrl: '/docs/',
   onBrokenLinks: 'throw',
   favicon: '/img/favicon.ico',
-  organizationName: 'monster-js',
-  projectName: 'docs',
+  organizationName: GITHUB_ORG,
+  projectName: GITHUB_REPO,
   themeConfig: {
     navbar: {
-      title: 'MunsterJS',
+      title: 'MonsterJS',
       logo: {
-        alt: 'MunsterJS logo',
-        src: '/img/munster.svg'
+        alt: 'MonsterJS logo',
+        src: '/img/monster.svg'
       },
       items: [
         {
@@ -22,7 +25,7 @@ module.exports = {
           position: 'left',
         },
         {
-          href: 'https://github.com/monster-js',
+          href: 'https://github.com/' + GITHUB_ORG,
           label: 'GitHub',
           position: 'right',
         }
@@ -45,11 +48,11 @@ module.exports = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/monsterjs',
+              href: 'https://stackoverflow.com/questions/tagged/' + GITHUB_ORG,
             },
             {
               label: 'Discord',
-              href: 'https://discord.com/invite/monster-js',
+              href: 'https://discord.com/invite/' + GITHUB_ORG,
             },
             {
               label: 'Twitter',
@@ -62,7 +65,7 @@ module.exports = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/monster-js',
+              href: 'https://github.com/' + GITHUB_ORG,
             },
           ],
         },
@@ -76,7 +79,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/monster-js/docs-v1/blob/master',
+          editUrl: 'https://github.com/' + GITHUB_ORG + '/' + GITHUB_REPO + '/blob/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

@@ -14,7 +14,7 @@ To create a custom pipe, we can use the [cli](./cli-what-is-cli) to automaticall
 The following code is an example of a working pipe codes but without functions yet.
 
 ```typescript
-import { Pipe } from '@munster-dev/core';
+import { Pipe } from '@monster-js/core';
 
 @Pipe('lowercase')
 export class LowercasePipe {
@@ -33,7 +33,7 @@ In the example above, the `transform(value, args)` method will do the transforma
 Ex.
 
 ```typescript
-import { Pipe } from '@munster-dev/core';
+import { Pipe } from '@monster-js/core';
 
 @Pipe('lowercase')
 export class LowercasePipe {

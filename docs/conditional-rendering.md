@@ -17,7 +17,7 @@ The syntax of conditional rendering directive is `v:if={<boolean>}`.
 Here's an example on how to use conditional rendering.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {

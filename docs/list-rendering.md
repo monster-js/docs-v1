@@ -18,7 +18,7 @@ Here's an example on how to use list rendering.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -51,7 +51,7 @@ If no list item directive is provided, it is `$item` by default.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -82,7 +82,7 @@ If no list index directive is provided, it is `$index` by default.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -112,7 +112,7 @@ List rendering is able to trigger an event if there is a change in the length of
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {

@@ -5,7 +5,7 @@ sidebar_label: Store
 slug: /store
 ---
 
-Store is a state management built for MunsterJS framework.
+Store is a state management built for MonsterJS framework.
 Using this store will help developers to centralize and maintain the codes easily.
 
 ## Installation
@@ -15,11 +15,11 @@ We can install the store to our project using npm or yarn.
 Ex.
 
 ```bash
-npm install @munster-dev/store
+npm install @monster-js/store
 ```
 or
 ```bash
-yarn add @munster-dev/store
+yarn add @monster-js/store
 ```
 
 ## Register the store
@@ -32,8 +32,8 @@ It is recommended that we register the store in the global container.
 Ex.
 
 ```typescript
-import { Container, GlobalDataSource, registerService } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Container, GlobalDataSource, registerService } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 
 const storeConfig = {
     state: {}
@@ -54,7 +54,7 @@ Here's an example on how to create an initial state:
 
 ```javascript
 // initial-state.ts
-import { StoreInterface } from "@munster-dev/store";
+import { StoreInterface } from "@monster-js/store";
 
 export interface InitialStateInterface {
     count: number;
@@ -70,8 +70,8 @@ export const initialState: StoreInterface<InitialStateInterface> = {
 After creating an initial state, we need to pass it as a service config for the store.
 
 ```typescript
-import { Container, GlobalDataSource, registerService } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Container, GlobalDataSource, registerService } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { initialState } from './initial-state';
 
 const container = new Container(new GlobalDataSource());
@@ -86,8 +86,8 @@ The change will be reflected to the components that has a subscription to this s
 Ex.
 
 ```javascript
-import { Component } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Component } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { InitialStateInterface } from './initial-state';
 
 @Component('app-greeting')
@@ -108,8 +108,8 @@ To get a value from store, the we can call the store `get` method.
 Ex.
 
 ```javascript
-import { Component } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Component } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { InitialStateInterface } from './initial-state';
 
 @Component('app-greeting')
@@ -130,8 +130,8 @@ Store also offers a way to subscribe for changes of each item of the state.
 Ex.
 
 ```javascript
-import { Component } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Component } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { InitialStateInterface } from './initial-state';
 
 @Component('app-greeting')
@@ -155,8 +155,8 @@ All subscriptions must be unsubscribe when the component is destroyed or else it
 Ex.
 
 ```javascript
-import { Component, Subscription } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Component, Subscription } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { InitialStateInterface } from './initial-state';
 
 @Component('app-greeting')
@@ -187,7 +187,7 @@ Using this can make your codes much cleaner and easy to manage.
 Here's an example on how to create an action:
 
 ```typescript
-import { createAction } from '@munster-dev/store';
+import { createAction } from '@monster-js/store';
 
 interface PostInterface {
     likesCount: number;
@@ -233,8 +233,8 @@ Second is the payload which holds the value that is passed to the `setPostLikesC
 Here's an example on how to dispatch the created action above:
 
 ```typescript
-import { Component } from '@munster-dev/core';
-import { Store } from '@munster-dev/store';
+import { Component } from '@monster-js/core';
+import { Store } from '@monster-js/store';
 import { InitialStateInterface, setPostLikesCount } from './initial-state';
 
 @Component('app-greeting')

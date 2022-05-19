@@ -34,7 +34,7 @@ Here are some examples on how to use the hooks in component, service and directi
 ### In component
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -55,7 +55,7 @@ export class Greeting {
 ### In service
 
 ```typescript
-import { Service } from '@munster-dev/core';
+import { Service } from '@monster-js/core';
 
 @Service()
 export class GreetingService {
@@ -72,7 +72,7 @@ export class GreetingService {
 ### In directive
 
 ```typescript
-import { Directive } from '@munster-dev/core';
+import { Directive } from '@monster-js/core';
 
 @Directive('highlight')
 export class HighlightDirective {

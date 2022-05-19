@@ -5,7 +5,7 @@ sidebar_label: Generate commands
 slug: /cli-generate-commands
 ---
 
-CLI is very helpful in generating files for MunsterJS application.
+CLI is very helpful in generating files for MonsterJS application.
 It makes creating components, services, modules and other files very easy.
 
 The syntax for generate command is `mn generate <type> <name>`. The type is the type of file we want to generate and the name is the name of the files to be generated. The name can also be a pathname.

@@ -5,7 +5,7 @@ sidebar_label: Custom directive
 slug: /custom-directive
 ---
 
-Custom directives are classes that manipulates an element in our MunsterJS application.
+Custom directives are classes that manipulates an element in our MonsterJS application.
 
 ## Creating a custom directive
 
@@ -14,7 +14,7 @@ To create a custom directive, we can use the [cli](./cli-what-is-cli) to automat
 The following code is an example of a working directive codes but without functions yet.
 
 ```typescript
-import { Directive } from '@munster-dev/core';
+import { Directive } from '@monster-js/core';
 
 @Directive('highlight')
 export class HighlightDirective {
@@ -26,7 +26,7 @@ The next step is to handle the directive by creating a method `$<directive name>
 Here is an example on how to handle the directive `highlight:color="red"`.
 
 ```typescript
-import { Directive, DirectiveArgInterface } from '@munster-dev/core';
+import { Directive, DirectiveArgInterface } from '@monster-js/core';
 
 @Directive('highlight')
 export class HighlightDirective {
@@ -62,7 +62,7 @@ The following are examples on how to register a directive.
 #### In component
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 import { CustomDirective1 } from './custom-directive1.directive';
 import { CustomDirective2 } from './custom-directive2.directive';
 
@@ -78,7 +78,7 @@ export class Greeting {
 #### In module
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { CustomDirective1 } from './custom-directive1.directive';
 import { CustomDirective2 } from './custom-directive2.directive';
 
@@ -93,7 +93,7 @@ export class AppModule extends BaseModule { }
 After the custom directive is registered, we can now use it like the built-in directives using the following syntax: `<namespace>:<name>="<value>"`.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 import { HighlightDirective } from './highlight.directive';
 
 @Directives(HighlightDirective)
@@ -120,7 +120,7 @@ Here's an example on how to change the background color of an element based on t
 
 #### The directive
 ```javascript
-import { Directive, createWatcher } from '@munster-dev/core';
+import { Directive, createWatcher } from '@monster-js/core';
 
 @Directive('highlight')
 export class HighlightDirective {
@@ -137,7 +137,7 @@ export class HighlightDirective {
 #### The component
 
 ```typescript
-import { Component, Directives } from '@munster-dev/core';
+import { Component, Directives } from '@monster-js/core';
 import { HighlightDirective } from './highlight.directive';
 
 @Directives(HighlightDirective)
@@ -181,7 +181,7 @@ Ex.
 #### The component
 
 ```typescript
-import { Component, Directives } from '@munster-dev/core';
+import { Component, Directives } from '@monster-js/core';
 import { AnimalDirective } from './animal.directive';
 
 @Directives(AnimalDirective)
@@ -194,7 +194,7 @@ export class Animals {
 #### The directive
 
 ```typescript
-import { Directive } from '@munster-dev/core';
+import { Directive } from '@monster-js/core';
 
 @Directive('animal')
 export class AnimalDirective {

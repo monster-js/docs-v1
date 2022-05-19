@@ -5,8 +5,8 @@ sidebar_label: Http
 slug: /http
 ---
 
-This package helps MunsterJS applications to communicate with a server using http protocol.
-This package is a wrapper of fetch api built for MunsterJS applications.
+This package helps MonsterJS applications to communicate with a server using http protocol.
+This package is a wrapper of fetch api built for MonsterJS applications.
 
 ## Installation
 
@@ -15,11 +15,11 @@ We can install the store to our project using npm or yarn.
 Ex.
 
 ```bash
-npm install @munster-dev/http
+npm install @monster-js/http
 ```
 or
 ```bash
-yarn add @munster-dev/http
+yarn add @monster-js/http
 ```
 
 ## Http interceptor
@@ -29,8 +29,8 @@ Http interceptor is a way to intercept and modify the request config of every ht
 The following code is an example of a working http interceptor codes but without functions yet.
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { BaseHttpInterceptor } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { BaseHttpInterceptor } from '@monster-js/http';
 
 @Service()
 export class HttpInterceptor extends BaseHttpInterceptor {
@@ -45,8 +45,8 @@ It can also make our code cleaner since we do not need to type long urls on our 
 Ex.
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { BaseHttpInterceptor } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { BaseHttpInterceptor } from '@monster-js/http';
 
 @Service()
 export class HttpInterceptor extends BaseHttpInterceptor {
@@ -61,8 +61,8 @@ We can also modify the request config of fetch api before being sent to the serv
 Ex.
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { BaseHttpInterceptor } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { BaseHttpInterceptor } from '@monster-js/http';
 
 @Service()
 export class HttpInterceptor extends BaseHttpInterceptor {
@@ -82,8 +82,8 @@ We can use the `setHeader` method provided by `BaseHttpInterceptor` to set a req
 Ex.
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { BaseHttpInterceptor } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { BaseHttpInterceptor } from '@monster-js/http';
 
 @Service()
 export class HttpInterceptor extends BaseHttpInterceptor {
@@ -101,8 +101,8 @@ After we build the Http interceptor we need to create a module we can import to 
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
-import { HttpClient } from '@munster-dev/http';
+import { Module, BaseModule } from '@monster-js/module';
+import { HttpClient } from '@monster-js/http';
 import { HttpInterceptor } from './http-interceptor.service';
 
 @Module({
@@ -126,8 +126,8 @@ Http supports different http verbs like GET, POST, PUT, PATCH, and DELETE.
 ### Get request
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { HttpClient, ResponseInterface } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { HttpClient, ResponseInterface } from '@monster-js/http';
 
 interface PostInterface {
     id: number;
@@ -147,8 +147,8 @@ export class PostService {
 ### Post request
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { HttpClient, ResponseInterface } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { HttpClient, ResponseInterface } from '@monster-js/http';
 
 interface PostInterface {
     id: number;
@@ -168,8 +168,8 @@ export class PostService {
 ### Put request
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { HttpClient, ResponseInterface } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { HttpClient, ResponseInterface } from '@monster-js/http';
 
 interface PostInterface {
     id: number;
@@ -189,8 +189,8 @@ export class PostService {
 ### Patch request
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { HttpClient, ResponseInterface } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { HttpClient, ResponseInterface } from '@monster-js/http';
 
 interface PostInterface {
     id: number;
@@ -210,8 +210,8 @@ export class PostService {
 ### Delete request
 
 ```typescript
-import { Service } from '@munster-dev/core';
-import { HttpClient, ResponseInterface } from '@munster-dev/http';
+import { Service } from '@monster-js/core';
+import { HttpClient, ResponseInterface } from '@monster-js/http';
 
 @Service()
 export class PostService {

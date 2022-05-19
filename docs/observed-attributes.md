@@ -20,7 +20,7 @@ Ex.
 #### Child component
 
 ```typescript
-import { Component, Attr } from '@munster-dev/core';
+import { Component, Attr } from '@monster-js/core';
 
 @Component('app-child')
 export class Child {
@@ -37,7 +37,7 @@ export class Child {
 #### Parent component
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-parent')
 export class Parent {
@@ -62,7 +62,7 @@ It uses the `@AttrBoolean` decorator to mark the observed attributes in the chil
 Ex.
 
 ```typescript
-import { Component, AttrBoolean } from '@munster-dev/core';
+import { Component, AttrBoolean } from '@monster-js/core';
 
 @Component('app-child')
 export class Child {
@@ -85,7 +85,7 @@ It uses the `@AttrNumber` decorator to mark the observed attributes in the child
 Ex.
 
 ```typescript
-import { Component, AttrNumber } from '@munster-dev/core';
+import { Component, AttrNumber } from '@monster-js/core';
 
 @Component('app-child')
 export class Child {
@@ -107,7 +107,7 @@ It has four arguments, first is the attribute name, second is the old value, thi
 Ex.
 
 ```typescript
-import { Component, Attr } from '@munster-dev/core';
+import { Component, Attr } from '@monster-js/core';
 
 @Component('app-child')
 export class Child {

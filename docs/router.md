@@ -16,11 +16,11 @@ We can install the router using npm or yarn.
 Ex.
 
 ```bash
-npm install @munster-dev/router
+npm install @monster-js/router
 ```
 or
 ```bash
-yarn add @munster-dev/router
+yarn add @monster-js/router
 ```
 
 ## Register the router module
@@ -31,8 +31,8 @@ We can register the individual apis or register the whole router module to the m
 Here's an example on how to register the router module:
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
-import { RouterModule } from '@munster-dev/router';
+import { Module, BaseModule } from '@monster-js/module';
+import { RouterModule } from '@monster-js/router';
 
 @Module({
     modules: [RouterModule]
@@ -42,7 +42,7 @@ export class AppModule extends BaseModule { }
 
 ## Creating a route
 
-`import { Route } from '@munster-dev/router'`
+`import { Route } from '@monster-js/router'`
 
 Route is just a component provided by the router package.
 Once route component is already defined or the router module is imported to the module we can now start using the `app-route` component inside our components.
@@ -50,7 +50,7 @@ Once route component is already defined or the router module is imported to the 
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 import { Greeting } from './greeting.component';
 
 @Component('app-root')
@@ -85,7 +85,7 @@ Here are the available props that can be used in a route.
 
 ## Router directive
 
-`import { RouterDirective } from '@munster-dev/router'`
+`import { RouterDirective } from '@monster-js/router'`
 
 Router also has a directive that is very helpful when using a router.
 
@@ -142,7 +142,7 @@ It can also run a block of codes before a route can activate or deactivate.
 The following code is an example of a working guard codes but without functions yet.
 
 ```typescript
-import { Guard } from '@munster-dev/router';
+import { Guard } from '@monster-js/router';
 
 @Guard()
 export class AuthGuard {
@@ -154,7 +154,7 @@ export class AuthGuard {
 The `canActivate` method can help us add additional checking if a component is allowed to activate.
 
 ```typescript
-import { Guard, RouterService } from '@munster-dev/router';
+import { Guard, RouterService } from '@monster-js/router';
 import { AuthService } from './auth.service';
 
 @Guard()
@@ -180,7 +180,7 @@ export class AuthGuard {
 The `canDeactivate` method can help us add additional checking if a component is allowed to deactivate.
 
 ```typescript
-import { Guard } from '@munster-dev/router';
+import { Guard } from '@monster-js/router';
 import { ChangesService } from './changes.service';
 
 @Guard()
@@ -196,7 +196,7 @@ export class ChangesGuard {
 
 ## Router module
 
-`import { RouterModule } from '@munster-dev/router';
+`import { RouterModule } from '@monster-js/router';
 
 Importing router module to our module will give us all the functionalities of the router since router module exports all the necessary elements to use the router.
 
@@ -213,7 +213,7 @@ export class RouterModule extends BaseModule {}
 
 ## Router service
 
-`import { RouterService } from '@munster-dev/router'`;
+`import { RouterService } from '@monster-js/router'`;
 
 Router service will provide us some useful functionalities to control the route, get router data, and watch for events.
 
@@ -222,8 +222,8 @@ To use the router service we need to inject it to our component.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
-import { RouterService } from '@munster-dev/router';
+import { Component } from '@monster-js/core';
+import { RouterService } from '@monster-js/router';
 
 @Component('app-greeting')
 export class Greeting {
@@ -239,8 +239,8 @@ Router service offers `navigate(url, state, title, replaceState)` method to navi
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
-import { RouterService } from '@munster-dev/router';
+import { Component } from '@monster-js/core';
+import { RouterService } from '@monster-js/router';
 
 @Component('app-greeting')
 export class Greeting {
@@ -268,8 +268,8 @@ This will allow us to subscribe to route change event using `onRouteChange` prop
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
-import { RouterService } from '@munster-dev/router';
+import { Component } from '@monster-js/core';
+import { RouterService } from '@monster-js/router';
 
 @Component('app-greeting')
 export class Greeting {
@@ -290,8 +290,8 @@ Since we subscribed to route change event, it is a good idea to remove all the s
 Ex.
 
 ```typescript
-import { Component, Subscription } from '@munster-dev/core';
-import { RouterService } from '@munster-dev/router';
+import { Component, Subscription } from '@monster-js/core';
+import { RouterService } from '@monster-js/router';
 
 @Component('app-greeting')
 export class Greeting {
@@ -320,8 +320,8 @@ More information about this route params are found in the [dynamic route matchin
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
-import { RouterService } from '@munster-dev/router';
+import { Component } from '@monster-js/core';
+import { RouterService } from '@monster-js/router';
 
 @Component('app-greeting')
 export class Greeting {
@@ -380,7 +380,7 @@ Ex.
 
 ```typescript
 // ./greeting.module
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { Greeting } from './greeting.component';
 
 @Module({

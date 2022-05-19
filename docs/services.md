@@ -16,7 +16,7 @@ To create a service, we can use the [cli](./cli-what-is-cli) to automatically ge
 The following code is an example of a working service codes but without functions yet.
 
 ```typescript
-import { Service } from '@munster-dev/core';
+import { Service } from '@monster-js/core';
 
 @Service()
 export class GreetingService {
@@ -33,7 +33,7 @@ The config is an object that contains a `singleton` property that is set to true
 Ex.
 
 ```typescript
-import { Service } from '@munster-dev/core';
+import { Service } from '@monster-js/core';
 
 @Service({ singleton: true })
 export class GreetingService {
@@ -48,7 +48,7 @@ Before we can use a service we need to register it in our component.
 Ex.
 
 ```typescript
-import { Component, Services } from '@munster-dev/core';
+import { Component, Services } from '@monster-js/core';
 import { GreetingService  } from './greeting.service';
 
 @Services(GreetingService)
@@ -63,7 +63,7 @@ Services can also have config that is received using the `onReceiveConfig` servi
 Ex.
 
 ```typescript
-import { Component, Services } from '@munster-dev/core';
+import { Component, Services } from '@monster-js/core';
 import { GreetingService } from './greeting.service';
 
 @Services({
@@ -84,7 +84,7 @@ Services registered in a module will be available to all the components register
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { GreetingService } from './greeting.service';
 
 @Module({
@@ -98,7 +98,7 @@ Services can also have config that is received using the `onReceiveConfig` servi
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { GreetingService } from './greeting.service';
 
 @Module({
@@ -119,7 +119,7 @@ If we want our service to be available to all our components inside our applicat
 Ex.
 
 ```typescript
-import { Container, GlobalDataSource, registerService } from '@munster-dev/core';
+import { Container, GlobalDataSource, registerService } from '@monster-js/core';
 import { GreetingService, config } from './greeting.service';
 
 const container = new Container(new GlobalDataSource());

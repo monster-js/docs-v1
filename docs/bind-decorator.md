@@ -13,7 +13,7 @@ Using this bind decorator will promote clean codes.
 Ex.
 
 ```typescript
-import { Component, Bind } from '@munster-dev/core';
+import { Component, Bind } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -39,7 +39,7 @@ To solve this issue we just need to add the `type` to the interface's import dec
 Ex.
 
 ```typescript
-import { Component, Bind } from '@munster-dev/core';
+import { Component, Bind } from '@monster-js/core';
 import type { UserInterface } from './user.interface';
 
 @Component('app-greeting')

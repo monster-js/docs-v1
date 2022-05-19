@@ -18,7 +18,7 @@ Here are the examples on how to register a pipe in component and in module.
 #### In component
 
 ```typescript
-import { Pipes, DatePipe } from '@munster-dev/core';
+import { Pipes, DatePipe } from '@monster-js/core';
 
 @Pipes(DatePipe)
 @Component('app-greeting')
@@ -32,8 +32,8 @@ export class Greeting {
 #### In Module
 
 ```typescript
-import { DatePipe } from '@munster-dev/core';
-import { Module, BaseModule } from '@munster-dev/module';
+import { DatePipe } from '@monster-js/core';
+import { Module, BaseModule } from '@monster-js/module';
 
 @Module({
     pipes: [DatePipe]
@@ -72,7 +72,7 @@ After injecting the pipe, we can now call the `transform(value: any, ...params?:
 Ex.
 
 ```typescript
-import { Component, Pipes } from '@munster-dev/core';
+import { Component, Pipes } from '@monster-js/core';
 import { LowercasePipe } from './lowercase.pipe';
 
 @Pipes(LowercasePipe)
@@ -119,7 +119,7 @@ Pipes can also have one or more parameters to be used during transformation.
 #### In logic
 
 ```typescript
-import { Component, Pipes } from '@munster-dev/core';
+import { Component, Pipes } from '@monster-js/core';
 import { DatePipe } from './date.pipe';
 
 @Pipes(DatePipe)

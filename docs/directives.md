@@ -26,7 +26,7 @@ Every time the model is changed from the view, the value in logic will be update
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -48,7 +48,7 @@ This directive is used to create a reference of an element to the property of th
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -73,7 +73,7 @@ Check [props](./props) for more information about this directive.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-root')
 export class Root {
@@ -98,7 +98,7 @@ Check the (event handling)[/event-handling] for more information about this dire
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -124,7 +124,7 @@ This directive is the same the as event directive with `on` namespace but it sto
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -155,7 +155,7 @@ Check the (list rendering)[/list-rendering] for more information.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-list')
 export class List {
@@ -178,7 +178,7 @@ It will remove the element from the dom if the value of the directive is false a
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {

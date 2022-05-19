@@ -16,7 +16,7 @@ The component_method this syntax must be a function and not a function call expr
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -38,7 +38,7 @@ We need to pass an unnamed function or a fat arrow function and return the call 
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -59,7 +59,7 @@ We can also get the event variable that holds the data of the event.
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -76,7 +76,7 @@ export class Greeting {
 or just simply
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {

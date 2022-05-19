@@ -10,7 +10,7 @@ const features = [
   {
     title: 'Easy to Use',
     // imageUrl: 'img/undraw_docusaurus_mountain.svg',
-    imageUrl: 'img/munster.svg',
+    imageUrl: 'img/monster.svg',
     description: (
       <>
         This framework is built to be simple, easy to understand and easy to use.
@@ -20,7 +20,7 @@ const features = [
   {
     title: 'Component-Based',
     // imageUrl: 'img/undraw_docusaurus_tree.svg',
-    imageUrl: 'img/munster3.svg',
+    imageUrl: 'img/monster3.svg',
     description: (
       <>
         Build small components that manages their own state as a building blocks to build larger applications.
@@ -30,7 +30,7 @@ const features = [
   {
     title: 'Web Components',
     // imageUrl: 'img/undraw_docusaurus_react.svg',
-    imageUrl: 'img/munster4.svg',
+    imageUrl: 'img/monster4.svg',
     description: (
       <>
         It is based on web components which is good for building loosely coupled components.

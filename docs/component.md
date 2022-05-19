@@ -17,7 +17,7 @@ The logic and the template is combined in a single file.
 It is a typescript class that has a `@Component` decorator and a `render()` method that returns a jsx elements.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -33,7 +33,7 @@ The second argument is optional and the default value is `HTMLElement`.
 
 Ex.
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-custom-button', HTMLButtonElement)
 export class CustomButton {
@@ -44,7 +44,7 @@ export class CustomButton {
 ```
 ### Styles
 
-MunsterJS uses `sass` by default but we can also use other css frameworks depending on our webpack configuration.
+MonsterJS uses `sass` by default but we can also use other css frameworks depending on our webpack configuration.
 This styles will only affect it's component and will have no effect on it's parent and child components.
 
 Component styles is imported directly to the `.component.tsx` file.
@@ -52,7 +52,7 @@ Component styles is imported directly to the `.component.tsx` file.
 Ex.
 ```typescript
 import './greeting.styles.scss';
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -76,12 +76,12 @@ greeting
 ## Define component
 
 Component must be defined before we can use it.
-Since MunsterJS components are web components, we can use the `customElement.define` as long as we have the MunsterJS polyfill imported before defining the components.
+Since MonsterJS components are web components, we can use the `customElement.define` as long as we have the MonsterJS polyfill imported before defining the components.
 
 Ex.
 ```javascript
 // index.ts
-import '@munster-dev/core/polyfill';
+import '@monster-js/core/polyfill';
 import { Greeting } from './greeting.component';
 
 customElement.define('app-greeting', Greeting);
@@ -89,8 +89,8 @@ customElement.define('app-greeting', Greeting);
 We can also use the selector defined in the `@Component` decorator.
 ```javascript
 // index.ts
-import '@munster-dev/core/polyfill';
-import { getSelector } '@munster-dev/core';
+import '@monster-js/core/polyfill';
+import { getSelector } '@monster-js/core';
 import { Greeting } from './greeting.component';
 
 customElement.define(getSelector(Greeting), Greeting);
@@ -111,7 +111,7 @@ To register the component, we just need to pass the component to the components 
 Ex.
 
 ```typescript
-import { Module, BaseModule } from '@munster-dev/module';
+import { Module, BaseModule } from '@monster-js/module';
 import { Greeting } from './greeting.component';
 
 @Module({
@@ -150,14 +150,14 @@ In the example above, the greeting component will be rendered in the view inside
 
 ## Other web components
 
-Web components that are not made using MunsterJS will also work inside a MunsterJS project.
+Web components that are not made using MonsterJS will also work inside a MonsterJS project.
 We just need to register the web component's selector as an external web component using `externalComponent` function found in the core package.
 
 Ex.
 
 ```typescript
 // src/index.ts
-import { externalComponent as ec } from '@munster-dev/core';
+import { externalComponent as ec } from '@monster-js/core';
 
 ec('external-web-component');
 ec('another-external-web-component');
@@ -175,7 +175,7 @@ Please see [Directives](./directives) for more information about directives.
 Ex.
 
 ```typescript
-import { Component, Directives } from '@munster-dev/core';
+import { Component, Directives } from '@monster-js/core';
 import { HighlightDirective } from './highlight.directive';
 
 @Directives(HighlightDirective)
@@ -201,7 +201,7 @@ Please see [Pipes](./pipes) for more information about pipes.
 Ex.
 
 ```typescript
-import { Component, Pipes } from '@munster-dev/core';
+import { Component, Pipes } from '@monster-js/core';
 import { UppercasePipe } from './uppercase.pipe';
 
 @Pipes(UppercasePipe)
@@ -221,7 +221,7 @@ To use the pipe inside the component's logic we can inject `PipeService` into ou
 Ex.
 
 ```typescript
-import { Component, Pipes, PipeService } from '@munster-dev/core';
+import { Component, Pipes, PipeService } from '@monster-js/core';
 import { UppercasePipe } from './uppercase.pipe';
 
 @Pipes(UppercasePipe)
@@ -256,7 +256,7 @@ Please see [Services](./services) for more information about services.
 Ex.
 
 ```typescript
-import { Component, Services } from '@munster-dev/core';
+import { Component, Services } from '@monster-js/core';
 import { GreetingService } from './greeting.service';
 
 @Services(GreetingService)

@@ -5,7 +5,7 @@ sidebar_label: Available pipes
 slug: /available-pipes
 ---
 
-MunsterJS provides a set of pipes.
+MonsterJS provides a set of pipes.
 These pipes are not available in components by default so we still need to register these pipes in our module or component.
 Please check the [pipes](./pipes) documentation for more information about pipes.
 
@@ -18,7 +18,7 @@ Ex.
 #### In template
 
 ```typescript
-import { Component, Pipes, LowercasePipe } from '@munster-dev/core';
+import { Component, Pipes, LowercasePipe } from '@monster-js/core';
 
 @Pipes(LowercasePipe)
 @Component('app-greeting')
@@ -32,7 +32,7 @@ export class Greeting {
 #### In logic
 
 ```typescript
-import { Component, Pipes, LowercasePipe } from '@munster-dev/core';
+import { Component, Pipes, LowercasePipe } from '@monster-js/core';
 
 @Pipes(LowercasePipe)
 @Component('app-greeting')
@@ -60,7 +60,7 @@ Ex.
 #### In template
 
 ```typescript
-import { Component, Pipes, UppercasePipe } from '@munster-dev/core';
+import { Component, Pipes, UppercasePipe } from '@monster-js/core';
 
 @Pipes(UppercasePipe)
 @Component('app-greeting')
@@ -74,7 +74,7 @@ export class Greeting {
 #### In logic
 
 ```typescript
-import { Component, Pipes, UppercasePipe } from '@munster-dev/core';
+import { Component, Pipes, UppercasePipe } from '@monster-js/core';
 
 @Pipes(UppercasePipe)
 @Component('app-greeting')

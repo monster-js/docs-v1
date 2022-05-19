@@ -20,7 +20,7 @@ This is very helpful when you want to run change detection inside a callback fun
 Ex.
 
 ```typescript
-import { Component, BaseComponent } from '@munster-dev/core';
+import { Component, BaseComponent } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting extends BaseComponent {
@@ -45,7 +45,7 @@ Callback functions will not trigger change detection but we can still pass a com
 Ex.
 
 ```typescript
-import { Component, BaseComponent, Bind } from '@munster-dev/core';
+import { Component, BaseComponent, Bind } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting extends BaseComponent {

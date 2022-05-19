@@ -5,20 +5,20 @@ sidebar_label: Quick start
 slug: /quick-start
 ---
 
-There are many ways to setup a MunsterJS project.
-One way is to use the [CLI](cli-installation.md) but the easiest way is to clone the starter app from [GitHub](https://github.com/munster-dev/starter-app).
+There are many ways to setup a MonsterJS project.
+One way is to use the [CLI](cli-installation.md) but the easiest way is to clone the starter app from [GitHub](https://github.com/monster-js/starter-app).
 
 ## Create app
 
-Clone the starter app from [GitHub](https://github.com/munster-dev/starter-app).
+Clone the starter app from [GitHub](https://github.com/monster-js/starter-app).
 
 ```bash
-git clone https://github.com/munster-dev/starter-app.git munster-app
+git clone https://github.com/monster-js/starter-app.git monster-app
 ```
 After cloning the repository, change directory into the starter project
 
 ```bash
-cd munster-app
+cd monster-app
 ```
 
 then install the dependencies
@@ -42,9 +42,9 @@ After the setup is complete, you can see the file structure of project in the cu
 package.json
 tsconfig.json
 node_modules
-.munster
+.monster
     ├── webpack.config.js
-    └── munster.json
+    └── monster.json
 src
     ├── index.html
     ├── index.ts
@@ -62,9 +62,9 @@ src
 * `package.json`                All the dependencies and configurations of your project.
 * `tsconfig.json`               The typescript configuration file.
 * `node_modules/`               This is where the installed node packages are located.
-* `.munster`                    Contains the configurations needed for MunsterJS project.
-* `.munster/webpack.config.js`  The configuration for webpack module bundler.
-* `.munster/munster.json`       The configuration for MunsterJS project. Usually used by the CLI.
+* `.monster`                    Contains the configurations needed for MonsterJS project.
+* `.monster/webpack.config.js`  The configuration for webpack module bundler.
+* `.monster/monster.json`       The configuration for MonsterJS project. Usually used by the CLI.
 * `src/`                        A directory that contains the source code and assets of your application.
 * `src/index.html`              The main HTML page that is served when someone visits your application.
 * `src/index.ts`                The main entry point of your application. It bootstrap the root module of the entire project.

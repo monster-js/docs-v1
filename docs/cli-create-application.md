@@ -13,8 +13,8 @@ mn new hello-world-app
 
 The syntax of this command is `mn new <application name>`.
 
-Running this command will generate a MunsterJS files needed to create an application and automatically install the npm packages.
-Once the installation of the packages is complete, we now have a new MunsterJS application.
+Running this command will generate a MonsterJS files needed to create an application and automatically install the npm packages.
+Once the installation of the packages is complete, we now have a new MonsterJS application.
 
 ## Local development
 

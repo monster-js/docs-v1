@@ -23,7 +23,7 @@ prop:message="Hello World!"
 Here's an example on how to pass properties to child component:
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-parent')
 export class Parent {
@@ -48,7 +48,7 @@ To get the props, we need to inject the `PropsService` provided by the core pack
 Ex.
 
 ```typescript
-import { Component, PropsService, OnInitImpl } from '@munster-dev/core';
+import { Component, PropsService, OnInitImpl } from '@monster-js/core';
 
 @Component('app-child')
 export class Child implements OnInitImpl {
@@ -76,7 +76,7 @@ This event will trigger once there are changes in the props on the parent compon
 Ex.
 
 ```typescript
-import { Component, PropsService, OnInitImpl } from '@munster-dev/core';
+import { Component, PropsService, OnInitImpl } from '@monster-js/core';
 
 @Component('app-child')
 export class Child implements OnInitImpl {
@@ -105,7 +105,7 @@ It is always a good practice to unsubscribe all of your subscriptions when compo
 Ex.
 
 ```typescript
-import { Component, PropsService, Subscription, OnInitImpl, OnDestroyImpl } from '@munster-dev/core';
+import { Component, PropsService, Subscription, OnInitImpl, OnDestroyImpl } from '@monster-js/core';
 
 @Component('app-child')
 export class Child implements OnInitImpl, OnDestroyImpl {

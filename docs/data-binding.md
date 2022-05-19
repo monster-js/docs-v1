@@ -13,7 +13,7 @@ This means that when a value is changed in logic, view gets updated, and when th
 Here is an example on how to bind a property from the logic into an attribute:
 
 ```typescript
-import { Component, Bind } from '@munster-dev/core';
+import { Component, Bind } from '@monster-js/core';
 
 @Component('app-root')
 export class App {
@@ -43,7 +43,7 @@ This is an example of one way binding.
 Here is an example on how to bind a component property to view:
 
 ```typescript
-import { Component, Bind } from '@munster-dev/core';
+import { Component, Bind } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
@@ -76,7 +76,7 @@ Every time the model is changed from the view, the value in logic will be update
 Ex.
 
 ```typescript
-import { Component } from '@munster-dev/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-root')
 export class App {
