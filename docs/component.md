@@ -237,7 +237,7 @@ To use the pipe inside the component's logic we can inject `PipeService` into ou
 Ex.
 
 ```typescript
-import { Component, Pipes, PipeService } from '@monster-js/core';
+import { Component, Pipes } from '@monster-js/core';
 import { UppercasePipe } from './uppercase.pipe';
 
 @Pipes(UppercasePipe)
@@ -246,10 +246,10 @@ export class Greeting {
 
     greeting = 'Hello World!';
 
-    constructor(private pipeService: PipeService) {}
+    constructor(private uppercasePipe: UppercasePipe) {}
 
     uppercaseText(text: string) {
-        return this.pipeService.transform('uppercase', text);
+        return this.uppercasePipe.transform('uppercase', text);
     }
 
     render() {
