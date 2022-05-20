@@ -53,7 +53,8 @@ src
         └── prod.json
     ├── index.html
     ├── index.ts
-    └── styles.scss
+    ├── styles.scss
+    └── types.d.ts
 .babelrc
 package.json
 tsconfig.json
@@ -73,7 +74,8 @@ tsconfig.json
 * `src/environments/prod.json`  The production environment of the project.
 * `src/index.html`              The main HTML page that is served when someone visits your application.
 * `src/index.ts`                The main entry point of your application. It bootstrap the root module of the entire project.
-* `src/styles.css`              Contains the global styles of the application.
+* `src/styles.scss`             Contains the global styles of the application.
+* `src/types.d.ts`              Interfaces to override the default types.
 * `.babelrc`                    Configuration for babel.
 * `package.json`                All the dependencies and configurations of your project.
 * `tsconfig.json`               The typescript configuration file.
