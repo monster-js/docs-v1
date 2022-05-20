@@ -9,6 +9,10 @@ Change detection is a way to synchronize the data between component's logic and 
 It triggers when a component method is called.
 This usually happens during user interaction with the UI like click, input, drag and other events.
 
+:::note
+Triggers when a component method is called.
+:::
+
 ## Manually trigger change detection
 
 In some cases, you may need to manually trigger change detection of a component.
@@ -22,21 +26,25 @@ Ex.
 ```typescript
 import { Component, BaseComponent } from '@monster-js/core';
 
-@Component('app-greeting')
-export class Greeting extends BaseComponent {
-    ...
-    connectedCallback() {
-        this.greetingService.getMessage().then((message) => {
-            this.message = message;
+@Component('app-counter')
+export class Counter extends BaseComponent {
+    counter = 0;
+
+    onInit() {
+        setInterval(() => {
+            this.counter++;
             this.$detectChanges();
-        });
+        }, 1000);
     }
-    ...
+
+    render() {
+        return <h1>{this.counter}</h1>
+    }
 }
 ```
 
-The callback function inside the `.then` will not trigger change detection since the callback function is not a component's method.
-So we call the `$detectChanges` method in order to trigger change detection.
+The callback function inside the `setInterval` will not trigger change detection since the callback function is not a component method.
+So we need to call the `$detectChanges` method in order to trigger change detection.
 
 ## Handling callbacks
 
@@ -48,17 +56,22 @@ Ex.
 import { Component, BaseComponent, Bind } from '@monster-js/core';
 
 @Component('app-greeting')
-export class Greeting extends BaseComponent {
-    ...
-    connectedCallback() {
-        this.greetingService.getMessage().then(this.callbackHandler);
+export class Counter extends BaseComponent {
+    counter = 0;
+
+    onInit() {
+        setInterval(this.updateCount, 1000);
     }
 
     @Bind
-    callbackHandler(message: string) {
-        this.message = message;
+    updateCount() {
+        console.log('hi');
+        this.counter++;
     }
-    ...
+
+    render() {
+        return <h1>{this.counter}</h1>
+    }
 }
 ```
 
