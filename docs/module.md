@@ -47,8 +47,8 @@ In this example, `App` is the root component.
 Components can be registered to a module so that they can interact with each other.
 
 For example, we have a parent component and a child component.
-The child component is rendered inside the template of the parent module.
-So the parent and child module needs to be registered in the module.
+The child component is rendered inside the view of the parent component.
+So the parent and child components needs to be registered in the module.
 
 Ex.
 
@@ -122,6 +122,7 @@ export class AppModule extends BaseModule { }
 ## Export services
 
 A service can also be exported from the module.
+Exported services can be used by the components inside the module that imports the module that has the exported services.
 
 Ex.
 
@@ -157,6 +158,7 @@ export class AppModule extends BaseModule { }
 ## Export directives
 
 A directive can also be exported from the module.
+Exported directives can be used by the components inside the module that imports the module that has the exported directives.
 
 Ex.
 
@@ -192,6 +194,7 @@ export class AppModule extends BaseModule { }
 ## Export pipes
 
 A pipe can also be exported from the module.
+Exported pipes can be used by the components inside the module that imports the module that has the exported pipes.
 
 Ex.
 

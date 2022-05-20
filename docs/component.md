@@ -232,7 +232,7 @@ export class Greeting {
 }
 ```
 
-To use the pipe inside the component's logic we can inject `PipeService` into our component's constructor.
+To use the pipe inside the component's logic we can inject pipe into our component's constructor.
 
 Ex.
 
@@ -249,7 +249,7 @@ export class Greeting {
     constructor(private uppercasePipe: UppercasePipe) {}
 
     uppercaseText(text: string) {
-        return this.uppercasePipe.transform('uppercase', text);
+        return this.uppercasePipe.transform(text);
     }
 
     render() {
@@ -262,7 +262,7 @@ Pipes can also be registered in a module so that it will be available to all the
 
 Please see [Module](./module) for more information about registering pipes into a module.
 
-:::node
+:::note
 Template pipes may throw a typescript type checking error since the pipe operator is originally an arithmetic operator that accepts any, number and bigint values.
 A temporary fix for this is to set our values to type any.
 This error will be addressed in later releases.
@@ -295,4 +295,4 @@ export class Greeting {
 
 Services can also be registered in a module so that it will be available to all the components registered in the module.
 
-Please see [Module](./module) for more information about registering services into a module.
+Please see [Module](/docs/module) for more information about registering services into a module.
