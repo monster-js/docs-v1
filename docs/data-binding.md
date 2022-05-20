@@ -13,7 +13,7 @@ This means that when a value is changed in logic, view gets updated, and when th
 Here is an example on how to bind a property from the logic into an attribute:
 
 ```typescript
-import { Component, Bind } from '@monster-js/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-root')
 export class App {
@@ -21,10 +21,9 @@ export class App {
     id: number;
 
     constructor() {
-        setInterval(this.updateId, 1000);
+        setInterval(() => this.updateId(), 1000);
     }
 
-    @Bind
     updateId() {
         this.id = new Date().getTime();
     }
@@ -43,17 +42,16 @@ This is an example of one way binding.
 Here is an example on how to bind a component property to view:
 
 ```typescript
-import { Component, Bind } from '@monster-js/core';
+import { Component } from '@monster-js/core';
 
 @Component('app-greeting')
 export class Greeting {
-    number = 'Hello World!';
+    number = 0;
 
     constructor() {
-        setInterval(this.updateNumber, 1000);
+        setInterval(() => this.updateNumber(), 1000);
     }
 
-    @Bind
     updateNumber() {
         this.number = new Date().getTime();
     }
@@ -84,7 +82,7 @@ export class App {
     public sampleModel: string = 'Some text';
 
     render() {
-        return <input view:model={this.sampleModel} type="text" />
+        return <input v:model={this.sampleModel} type="text" />
     }
 }
 ```

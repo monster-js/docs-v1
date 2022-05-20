@@ -11,7 +11,7 @@ It uses a directive with namespace of `on` to bind the component methods to an e
 ## Syntax
 
 The syntax of event handling directive is `on:<event_name>={<component_method>}`.
-The component_method this syntax must be a function and not a function call expression.
+The component_method must be a function and not a function call expression.
 
 Ex.
 
@@ -32,8 +32,8 @@ export class Greeting {
 
 ## Method parameters
 
-Since event handling directive accepts a function as a directive value.
-We need to pass an unnamed function or a fat arrow function and return the call expression of the component method in order for us to be able to pass some parameters to it.
+Since event handling directive accepts a function as directive value.
+We need to pass an unnamed function or fat arrow function and return the call expression of the component method in order for us to be able to pass some parameters to it.
 
 Ex.
 
