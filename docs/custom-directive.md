@@ -106,18 +106,17 @@ export class Greeting {
 
 ## Value change watcher
 
-To let our directive react when it's value is changed we can use the `watch(valueCaller, element, component, updateCallback)` function from the core package.
+To let our directive react when it's value is changed we can use the `watchDirective(arg, updateCallback)` function from the core package.
 
 | Params | Description |
 | --- | --- |
-| valueCaller       | A function that calls the value of the directive. |
-| element           | The element where the directive is attached. |
-| component         | The component where the directive is being used. |
+| arg               | The directive to be watched. |
 | updateCallback    | A function that runs when the value of the directive is changed. |
 
 Here's an example on how to change the background color of an element based on the value passed to its directive.
 
 #### The directive
+
 ```javascript
 import { Directive, watch } from '@monster-js/core';
 
@@ -127,8 +126,8 @@ export class HighlightDirective {
         const initialValue = arg.directive.get();
         arg.element.style.backgroundColor = initialValue;
 
-        watch(() => arg.directive.get(), arg.element, arg.component, newValue => {
-            arg.element.style.backgroundColor = newValue;
+        watchDirective(arg, value => {
+            arg.element.style.backgroundColor = value;
         });
     }
 }
@@ -147,6 +146,33 @@ export class Greeting {
 
     render() {
         return <h1 highlight:color={this.highlightColor}></h1>
+    }
+}
+```
+
+We can also use the `watch(valueCaller, element, component, updateCallback)` function for a better control of our watcher.
+
+| Params | Description |
+| --- | --- |
+| valueCaller       | A function that calls the value of the directive. |
+| element           | The element where the directive is attached. |
+| component         | The component where the directive is being used. |
+| updateCallback    | A function that runs when the value of the directive is changed. |
+
+Ex.
+
+```javascript
+import { Directive, watch } from '@monster-js/core';
+
+@Directive('highlight')
+export class HighlightDirective {
+    $color(arg: DirectiveArgInterface) {
+        const initialValue = arg.directive.get();
+        arg.element.style.backgroundColor = initialValue;
+
+        watch(() => arg.directive.get(), arg.element, arg.component, value => {
+            arg.element.style.backgroundColor = value;
+        });
     }
 }
 ```
