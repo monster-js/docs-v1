@@ -6,7 +6,7 @@ slug: /pipes
 ---
 
 Pipes are used to transform a string, object, number and other values for display.
-They are very useful because then an be used directly in the template or in logic in all of our components.
+They are very useful because it can be used directly in template or logic in all of our components.
 
 ## Register pipe
 
@@ -18,13 +18,13 @@ Here are the examples on how to register a pipe in component and in module.
 #### In component
 
 ```typescript
-import { Pipes, DatePipe } from '@monster-js/core';
+import { Pipes, LowercasePipe } from '@monster-js/core';
 
-@Pipes(DatePipe)
+@Pipes(LowercasePipe)
 @Component('app-greeting')
 export class Greeting {
     render() {
-        return <h1>{ new Date() | date('YYYY-MM-DD') }</h1>
+        return <h1>{ 'Hello World!' | lowercase }</h1>
     }
 }
 ```
@@ -32,18 +32,18 @@ export class Greeting {
 #### In Module
 
 ```typescript
-import { DatePipe } from '@monster-js/core';
+import { LowercasePipe } from '@monster-js/core';
 import { Module, BaseModule } from '@monster-js/module';
 
 @Module({
-    pipes: [DatePipe]
+    pipes: [LowercasePipe]
 })
 export class GreetingModule extends BaseModule { }
 ```
 
 ## Template pipes
 
-In the view, we can use the pipes inside jsx expression container `{}`.
+In the template, we can use the pipes inside jsx expression container `{}`.
 The syntax is `{ <value> | <pipe selector> }`.
 
 Ex.
@@ -54,7 +54,7 @@ Ex.
 
 In the example above, the `lowercase` is the pipe.
 
-:::node
+:::danger
 Template pipes may throw a typescript type checking error since the pipe operator is originally an arithmetic operator that accepts any, number and bigint values.
 A temporary fix for this is to set our values to type any.
 This error will be addressed in later releases.

@@ -154,6 +154,7 @@ export class AuthGuard {
 The `canActivate` method can help us add additional checking if a component is allowed to activate.
 
 ```typescript
+import { ObservableInterface } from '@monster-js/core';
 import { Guard, RouterService } from '@monster-js/router';
 import { AuthService } from './auth.service';
 
@@ -165,7 +166,7 @@ export class AuthGuard {
         private routerService: RouterService
     ) {}
 
-    public override canActivate(): Observable<boolean> | boolean {
+    public override canActivate(): ObservableInterface<boolean> | boolean {
         if (this.authService.isLoggedIn) {
             return true;
         }
@@ -180,6 +181,7 @@ export class AuthGuard {
 The `canDeactivate` method can help us add additional checking if a component is allowed to deactivate.
 
 ```typescript
+import { ObservableInterface } from '@monster-js/core';
 import { Guard } from '@monster-js/router';
 import { ChangesService } from './changes.service';
 
@@ -188,7 +190,7 @@ export class ChangesGuard {
 
     constructor(private changesService: ChangesService) {}
 
-    public override canDeactivate(): Observable<boolean> | boolean {
+    public override canDeactivate(): ObservableInterface<boolean> | boolean {
         return !this.changesService.hasChanges;
     }
 }

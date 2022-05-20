@@ -64,6 +64,15 @@ export class Greeting {
 }
 ```
 
+:::note
+The codes above might throw a typescript linter error `Cannot find name 'listItem'` since `listItem` is not defined.
+A temporary fix for this is to declare the list item above our component and below the import statements list the following.
+
+```typescript
+declare const listItem: string;
+```
+:::
+
 The example code above will generate a list of elements that looks like the following:
 
 ```html
@@ -94,6 +103,15 @@ export class Greeting {
     }
 }
 ```
+
+:::note
+The codes above might throw a typescript linter error `Cannot find name 'listIndex'` since `listIndex` is not defined.
+A temporary fix for this is to declare the list item above our component and below the import statements list the following.
+
+```typescript
+declare const listIndex: number;
+```
+:::
 
 The example code above will generate a list of elements that looks like the following:
 

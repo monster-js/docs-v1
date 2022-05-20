@@ -35,6 +35,8 @@ Here's a list of available types for generate command:
 | service       | Generate a service file that will hold the business logic of the application. |
 | class         | Generate a simple typescript class. |
 | interface     | Generate a typescript interface to describe a data. |
+| directive     | Generate a directive file. |
+| pipe          | Generate a pipe file. |
 | module        | Generate a module file to group our components, directives, and other files that are related to the module. |
 
 For more information about each command, we can check the help feature of the cli.
