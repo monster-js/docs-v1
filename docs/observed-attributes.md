@@ -5,10 +5,12 @@ sidebar_label: Observed attributes
 slug: /observed-attributes
 ---
 
-Observed attributes are values passed down from parent component to child component and the changes is being observed by the child component.
-This are different from a normal element attributes.
+Observed attributes are values passed down from parent component to child component and their changes is being observed by the child component.
+This is different from a normal element attribute.
 This feature uses the web components observed attributes implementation.
-The same as web component observed attributes we cannot pass objects and arrays but we can pass string, boolean and numbers.
+The same as web component's observed attributes we cannot pass objects and arrays to it.
+Web component observed attributes only accepts string values but MonsterJS observed attributes is a little advanced than web component's implementation.
+MonsterJS observed attributes can handle string, number or boolean values.
 
 ## String attribute
 
