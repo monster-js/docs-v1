@@ -26,6 +26,7 @@ Lifecycle hooks are functions that lets you run a block of codes when your compo
 | connectedCallback() `com` `dir`                                   | A native web component hook. Called when the component is connected to the dom tree |
 | disconnectedCallback() `com` `dir`                                | A native web component hook. Called when the component is disconnected to the dom tree. |
 | allDirectives(param: AllDirectivesArgInterface) `dir`             | Called after directive is initialized. This hook is used to handle all directive names. |
+| onPropsChange() `com`                                             | Called when there are changes to component's props. |
 
 ## Hooks usage
 

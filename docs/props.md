@@ -48,10 +48,11 @@ To get the props, we need to inject the `PropsService` provided by the core pack
 Ex.
 
 ```typescript
-import { Component, PropsService, OnInitImpl } from '@monster-js/core';
+import { Component, PropsService } from '@monster-js/core';
 
+@Services(PropsService)
 @Component('app-child')
-export class Child implements OnInitImpl {
+export class Child {
     constructor(private propsService: PropsService) {}
 
     onInit() {
@@ -70,65 +71,22 @@ The `get` method of PropsService will return a value of a property if we pass th
 
 ## On props change event
 
-We can also subscribe to a props change event using the `PropsService`.
-This event will trigger once there are changes in the props on the parent component side.
+We can watch for props changes using the `onPropsChange` hook.
+This hook will trigger once there is a changes in any of the props on the parent component side.
 
 Ex.
 
 ```typescript
-import { Component, PropsService, OnInitImpl } from '@monster-js/core';
+import { Component, PropsService } from '@monster-js/core';
 
+@Services(PropsService)
 @Component('app-child')
-export class Child implements OnInitImpl {
+export class Child {
 
     constructor(private propsService: PropsService) {}
 
-    onInit() {
-        this.propsService.onPropsChange.subscribe(this.onPropsChange);
-    }
-
-    @Bind()
-    private onPropsChange(props) {
-        console.log(props);
-    }
-
-    render() {
-        return <h1>Child component</h1>
-    }
-}
-```
-
-## Unsubscribe to event
-
-It is always a good practice to unsubscribe all of your subscriptions when component is destroyed.
-
-Ex.
-
-```typescript
-import { Component, PropsService, Subscription, OnInitImpl, OnDestroyImpl } from '@monster-js/core';
-
-@Component('app-child')
-export class Child implements OnInitImpl, OnDestroyImpl {
-
-    subscriptions: SubscriptionInterface[] = [];
-
-    constructor(private propsService: PropsService) {}
-
-    onInit() {
-        // push the subscription in to subscriptions array when component is initialized
-        this.subscriptions.push(
-            this.propsService.onPropsChange.subscribe(this.onPropsChange)
-        );
-    }
-
-    onDestroy() {
-        // unsubscribe all subscriptions when component is destroyed
-        this.subscriptions.forEach(item => item.unsubscribe());
-    }
-
-    @Bind()
-    private onPropsChange(props) {
-        console.log(props);
+    onPropsChange() {
+        console.log(this.propsService.get());
     }
 
     render() {
