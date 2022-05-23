@@ -34,6 +34,10 @@ The `@Component` decorator has two parameters.
 First is the component selector and second is what type of custom element constructor the component is.
 The second argument is optional and the default value is `HTMLElement`.
 
+:::note
+Selector must be all lowercase or it might throw an error if there are uppercase characters.
+:::
+
 Ex.
 ```typescript
 import { Component } from '@monster-js/core';
