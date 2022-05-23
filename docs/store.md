@@ -198,7 +198,7 @@ interface InitialStateInterface {
     post: PostInterface;
 }
 
-export const setPostLikesCount = createAction<number, PostInterface>((state: PostInterface, payload: number) => {
+export const setPostLikesCount = createAction<number, PostInterface>('[Post] set likes count', (state: PostInterface, payload: number) => {
     return {
         ...state,
         likesCount: payload
@@ -225,7 +225,11 @@ First is the type of data that `setPostLikesCount` action will accept.
 The second type is the type of the post state inside the store.
 
 There are two parameters for the `createAction` function.
-First is the state which holds the current state of the post.
+Fist is a string that describes the action.
+Second is the reducer function that returns the new state of the selected store.
+
+The reducer function has two arguments.
+First is the state which holds the current state of the store.
 Second is the payload which holds the value that is passed to the `setPostLikesCount` action when the action is called.
 
 #### Dispatch an action
