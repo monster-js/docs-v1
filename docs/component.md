@@ -9,10 +9,15 @@ Components are the most basic building block of an application.
 It is composed of template, logic and styles.
 It is used to split the UI into small and reusable pieces of codes.
 
+:::note
+Component file must have an extension of `.tsx` instead of `.ts`.
+:::
+
 ## Logic and template
 
-The logic and the template is combined in a single file.
+The logic and template is combined in a single file.
 It is a typescript class that has a `@Component` decorator and a `render()` method that returns a jsx element.
+Since a component has jsx elements inside it, it should have an extension of `.tsx` instead of `.ts`.
 
 ```typescript
 import { Component } from '@monster-js/core';
