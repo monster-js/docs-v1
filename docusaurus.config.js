@@ -13,6 +13,7 @@ module.exports = {
   organizationName: GITHUB_ORG,
   projectName: GITHUB_REPO,
   themeConfig: {
+    ogImage: '/img/og-image.png',
     metadata: [
       {
         name: 'keywords',
@@ -85,6 +86,10 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
+        googleAnalytics: {
+          trackingID: 'UA-229775239-1',
+          anonymizeIP: true
+        },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/' + GITHUB_ORG + '/' + GITHUB_REPO + '/blob/master',
