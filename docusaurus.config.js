@@ -8,6 +8,7 @@ module.exports = {
   baseUrl: '/' + GITHUB_REPO + '/',
   onBrokenLinks: 'throw',
   favicon: '/img/favicon.ico',
+  ogImage: '/img/og-image.png',
   organizationName: GITHUB_ORG,
   projectName: GITHUB_REPO,
   themeConfig: {
