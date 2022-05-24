@@ -1,11 +1,12 @@
 const GITHUB_REPO = 'docs-v1';
+const BASE_URL = '/';
 const GITHUB_ORG = 'monster-js';
 
 module.exports = {
   title: 'MonsterJS',
   tagline: 'Simple but powerful javascript framework.',
-  url: 'https://monsterjs.com',
-  baseUrl: '/' + GITHUB_REPO + '/',
+  url: 'https://monster-js.org',
+  baseUrl: BASE_URL,
   onBrokenLinks: 'throw',
   favicon: '/img/favicon.ico',
   organizationName: GITHUB_ORG,
