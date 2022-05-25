@@ -81,10 +81,10 @@ module.exports = {
     [
       '@docusaurus/preset-classic',
       {
-        googleAnalytics: {
-          trackingID: 'UA-229775239-1',
-          anonymizeIP: true
-        },
+        // googleAnalytics: {
+        //   trackingID: 'UA-229775239-1',
+        //   anonymizeIP: true
+        // },
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/' + GITHUB_ORG + '/' + GITHUB_REPO + '/blob/master',
