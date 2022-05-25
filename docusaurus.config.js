@@ -1,6 +1,6 @@
 const GITHUB_REPO = 'docs-v1';
 const BASE_URL = '/';
-const URL = 'https://monster-js.org/';
+const URL = 'https://monster-js.org';
 const GITHUB_ORG = 'monster-js';
 
 module.exports = {
