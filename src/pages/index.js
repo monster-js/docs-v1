@@ -9,7 +9,6 @@ import styles from './styles.module.css';
 const features = [
   {
     title: 'Easy to Use',
-    // imageUrl: 'img/undraw_docusaurus_mountain.svg',
     imageUrl: 'img/monster.svg',
     description: (
       <>
@@ -19,7 +18,6 @@ const features = [
   },
   {
     title: 'Component-Based',
-    // imageUrl: 'img/undraw_docusaurus_tree.svg',
     imageUrl: 'img/monster3.svg',
     description: (
       <>
@@ -29,7 +27,6 @@ const features = [
   },
   {
     title: 'Web Components',
-    // imageUrl: 'img/undraw_docusaurus_react.svg',
     imageUrl: 'img/monster4.svg',
     description: (
       <>
@@ -80,13 +77,13 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`The Progressive JavaScript Framework`}
+      description="MonsterJS is a JavaScript framework for building web applications. It is based on web components which is good for encapsulating components and building micro frontend apps.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <p className="hero__subtitle">Web Components.</p>
+          <p className="hero__subtitle">Web Components</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(

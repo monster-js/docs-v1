@@ -5,7 +5,7 @@ const GITHUB_ORG = 'monster-js';
 
 module.exports = {
   title: 'MonsterJS',
-  tagline: 'Simple but powerful javascript framework.',
+  tagline: 'Simple but powerful progressive JavaScript framework.',
   url: URL,
   baseUrl: BASE_URL,
   onBrokenLinks: 'throw',
@@ -13,13 +13,8 @@ module.exports = {
   organizationName: GITHUB_ORG,
   projectName: GITHUB_REPO,
   themeConfig: {
-    ogImage: '/img/og-image.png',
-    metadata: [
-      {
-        name: 'keywords',
-        content: 'web component, monster-js, monsterjs, javascript framework, framework'
-      }
-    ],
+    image: '/img/og-image.png',
+    metadata: [{name: 'keywords', content: 'web component, monster-js, monsterjs, javascript framework, framework'}],
     navbar: {
       title: 'MonsterJS',
       logo: {
