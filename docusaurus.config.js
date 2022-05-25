@@ -90,9 +90,26 @@ module.exports = {
           editUrl: 'https://github.com/' + GITHUB_ORG + '/' + GITHUB_REPO + '/blob/master',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve('./src/css/custom.css')
         },
       },
     ],
+  ],
+  scripts: [
+    {
+      src: 'https://www.googletagmanager.com/gtag/js?id=UA-229775239-1'
+    },
+    {
+      src: '/js/custom.js'
+    }
   ]
 };
+// <!-- Global site tag (gtag.js) - Google Analytics -->
+// <script async src="https://www.googletagmanager.com/gtag/js?id=UA-229775239-1"></script>
+// <script>
+//   window.dataLayer = window.dataLayer || [];
+//   function gtag(){dataLayer.push(arguments);}
+//   gtag('js', new Date());
+
+//   gtag('config', 'UA-229775239-1');
+// </script>
