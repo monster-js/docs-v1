@@ -30,25 +30,13 @@ export class Greeting {
 }
 ```
 
-The `@Component` decorator has two parameters.
-First is the component selector and second is what type of custom element constructor the component is.
-The second argument is optional and the default value is `HTMLElement`.
+The parameter of `@Component` will be the web component selector.
+In the example above the selector is `app-greeting` which means our component must be `<app-greeting />` when we render it to the view.
 
-:::note
+:::caution
 Selector must be all lowercase or it might throw an error if there are uppercase characters.
 :::
 
-Ex.
-```typescript
-import { Component } from '@monster-js/core';
-
-@Component('app-custom-button', HTMLButtonElement)
-export class CustomButton {
-    render() {
-        return <button>Click Me</button>
-    }
-}
-```
 ## Styles
 
 MonsterJS uses `sass` by default but we can also use other css frameworks depending on our webpack configuration.
@@ -84,12 +72,10 @@ greeting
 
 ## Shadow dom component
 
-To encapsulate our component we can attach a shadow dom in it.
+To encapsulate our component we can attach a shadow dom to it.
 To do this, we can use the `@ShadowComponent` decorator instead of `@Component`.
-The @ShadowComponent decorator has three parameters.
-First is the component selector,
-second is the shadow mode(`open` or `closed`) which is optional and the default is `open`,
-and the third one is what type of custom element constructor the component is which is also optional and the default is HTMLElement.
+The @ShadowComponent decorator has two parameters.
+First is the component selector, and second is the shadow mode(`open` or `closed`) which is optional and the default is `open`,
 
 Ex.
 
@@ -97,12 +83,40 @@ Ex.
 import './greeting.styles.scss';
 import { ShadowComponent } from '@monster-js/core';
 
-@ShadowComponent('app-greeting')
+@ShadowComponent('app-greeting', 'closed')
 export class Greeting {
     render() {
         return <h1>Hello World!</h1>
     }
 }
+```
+
+## Custom element component
+
+Custom element allows us to define a new type of elements.
+To create a custom element, we need decorate our component with `@CustomElement` decorator.
+This decorator has two parameter, first is the type of custom element constructor and second is what type of element it will extend.
+
+Ex.
+
+```typescript
+import './greeting.styles.scss';
+import { Component, CustomElement } from '@monster-js/core';
+
+@CustomElement(HTMLButtonElement, 'button')
+@Component('app-custom-button')
+export class CustomButton {
+    render() {
+        return <span>I am a button!</span>
+    }
+}
+```
+
+In the example above, we created a custom element using `@CustomElement(HTMLButtonElement, 'button')`.
+That means we need to attach the component in a `<button></button>` element like the following.
+
+```typescript
+<button is="app-custom-button"></button>
 ```
 
 ## Define component
