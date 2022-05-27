@@ -48,7 +48,7 @@ To get the props, we need to inject the `PropsService` provided by the core pack
 Ex.
 
 ```typescript
-import { Component, PropsService } from '@monster-js/core';
+import { Component, PropsService, Services } from '@monster-js/core';
 
 @Services(PropsService)
 @Component('app-child')
@@ -77,7 +77,7 @@ This hook will trigger once there is a changes in any of the props on the parent
 Ex.
 
 ```typescript
-import { Component, PropsService } from '@monster-js/core';
+import { Component, PropsService, Services } from '@monster-js/core';
 
 @Services(PropsService)
 @Component('app-child')
