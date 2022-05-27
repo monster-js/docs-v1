@@ -82,6 +82,29 @@ greeting
     └── greeting.styles.scss
 ```
 
+## Shadow dom component
+
+To encapsulate our component we can attach a shadow dom in it.
+To do this, we can use the `@ShadowComponent` decorator instead of `@Component`.
+The @ShadowComponent decorator has three parameters.
+First is the component selector,
+second is the shadow mode(`open` or `closed`) which is optional and the default is `open`,
+and the third one is what type of custom element constructor the component is which is also optional and the default is HTMLElement.
+
+Ex.
+
+```typescript
+import './greeting.styles.scss';
+import { ShadowComponent } from '@monster-js/core';
+
+@ShadowComponent('app-greeting')
+export class Greeting {
+    render() {
+        return <h1>Hello World!</h1>
+    }
+}
+```
+
 ## Define component
 
 Component must be defined before we can use it.
