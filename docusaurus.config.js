@@ -5,7 +5,7 @@ const GITHUB_ORG = 'monster-js';
 
 module.exports = {
   title: 'MonsterJS',
-  tagline: 'Simple but powerful progressive JavaScript framework.',
+  tagline: 'Simple but powerful JavaScript framework.',
   url: URL,
   baseUrl: BASE_URL,
   onBrokenLinks: 'throw',

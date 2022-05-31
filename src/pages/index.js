@@ -77,7 +77,7 @@ function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`The Progressive JavaScript Framework`}
+      title={`JavaScript Framework`}
       description="MonsterJS is a JavaScript framework for building web applications. It is based on web components which is good for encapsulating components and building micro frontend apps.">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
