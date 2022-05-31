@@ -91,6 +91,93 @@ export class Greeting {
 }
 ```
 
+## Web component slot
+
+With shadow dom, we can display elements from parent to child component's view using slots.
+
+Ex.
+
+#### Parent component
+```typescript
+import { Component } from '@monster-js/core';
+
+@Component('app-parent')
+export class Parent {
+    render() {
+        return <div>
+            <app-child>
+                <h1>I am a slot content</h1>
+                <span>I am a slot content</span>
+            </app-child>
+        </div>
+    }
+}
+```
+
+All elements inside the `<app-child></app-child>` tag will be displayed in the child component slot.
+
+#### Child component
+```typescript
+import { ShadowComponent } from '@monster-js/core';
+
+@ShadowComponent('app-child', 'closed')
+export class Child {
+    render() {
+        return <div>
+            <slot></slot>
+        </div>
+    }
+}
+```
+
+### Named slot
+
+Named slots allows us to choose where we want to display the elements inside the child component's view.
+A component can have multiple named slots.
+
+Ex.
+
+#### Parent component
+```typescript
+import { Component } from '@monster-js/core';
+
+@Component('app-parent')
+export class Parent {
+    render() {
+        return <div>
+            <app-child>
+                <h1 slot="slot-1">I am a slot content</h1>
+                <span slot="slot-2">I am a slot content</span>
+            </app-child>
+        </div>
+    }
+}
+```
+
+#### Child component
+```typescript
+import { ShadowComponent } from '@monster-js/core';
+
+@ShadowComponent('app-child', 'closed')
+export class Child {
+    render() {
+        return <div>
+            <slot name="slot-1"></slot>
+            <div>
+                <slot name="slot-2"></slot>
+            </div>
+        </div>
+    }
+}
+```
+
+In the example above, the element `<h1 slot="slot-1">I am a slot content</h1>` from parent component will be display in `<slot name="slot-1"></slot>` in child component.
+The same for the `<span slot="slot-2">I am a slot content</span>` will be displayed in `<slot name="slot-2"></slot>`.
+
+:::note
+Slots only works when using shadow dom.
+:::
+
 ## Custom element component
 
 Custom element allows us to define a new type of elements.
