@@ -60,7 +60,11 @@ module.exports = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com',
+              href: 'https://twitter.com/mfpjayb',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com/fbmonsterjs',
             },
           ],
         },
