@@ -6,6 +6,7 @@ module.exports = {
     ],
     'Main Concept': [
       'component.md',
+      'function-component.md',
       'module.md',
       'event-handling.md',
       'data-binding.md',
