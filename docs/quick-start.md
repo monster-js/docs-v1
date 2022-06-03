@@ -39,8 +39,7 @@ After the setup is complete, you can see the file structure of project in the cu
 
 ```
 .monster
-    ├── monster.json
-    └── webpack.config.js
+    └── monster.json
 node_modules
 src
     └── app
@@ -55,13 +54,11 @@ src
     ├── index.ts
     ├── styles.scss
     └── types.d.ts
-.babelrc
 package.json
 tsconfig.json
 ```
 * `.monster`                    Contains the configurations needed for MonsterJS project.
 * `.monster/monster.json`       The configuration for MonsterJS project. Usually used by the CLI.
-* `.monster/webpack.config.js`  The configuration for webpack module bundler.
 * `node_modules/`               This is where the installed node packages are located.
 * `src/`                        A directory that contains the source code and assets of your application.
 * `src/app/`                    This is where the codes related to application is located
@@ -76,6 +73,5 @@ tsconfig.json
 * `src/index.ts`                The main entry point of your application. It bootstrap the root module of the entire project.
 * `src/styles.scss`             Contains the global styles of the application.
 * `src/types.d.ts`              Interfaces to override the default types.
-* `.babelrc`                    Configuration for babel.
 * `package.json`                All the dependencies and configurations of your project.
 * `tsconfig.json`               The typescript configuration file.
