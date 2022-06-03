@@ -401,7 +401,7 @@ A temporary fix for this is to set our values to type any.
 This error will be addressed in later releases.
 :::
 
-## component services
+## Component services
 
 To use services inside a component we need to register the services to the component using `@Services` decorator.
 After we register the service, we can now use it inside the component's logic and view.

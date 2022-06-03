@@ -6,6 +6,7 @@ module.exports = {
     ],
     'Main Concept': [
       'component.md',
+      'function-component.md',
       'module.md',
       'event-handling.md',
       'data-binding.md',
@@ -28,12 +29,15 @@ module.exports = {
     ],
     'Useful Topics': [
       'available-pipes.md',
-      'bind-decorator.md'
+      'bind-decorator.md',
+      'environment-variables.md'
     ],
     CLI: [
       'cli-what-is-cli.md',
       'cli-installation.md',
       'cli-create-application.md',
+      'cli-local-development-server.md',
+      'cli-build-project.md',
       'cli-generate-commands.md',
       'cli-useful-commands.md'
     ]
