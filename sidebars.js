@@ -30,7 +30,8 @@ module.exports = {
     'Useful Topics': [
       'available-pipes.md',
       'bind-decorator.md',
-      'environment-variables.md'
+      'environment-variables.md',
+      'known-issues.md'
     ],
     CLI: [
       'cli-what-is-cli.md',
