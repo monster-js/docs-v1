@@ -229,9 +229,46 @@ import { Greeting } from './greeting.component';
 customElement.define(getSelector(Greeting), Greeting);
 ```
 
+or we can use the `defineComponent` function provided by the core module.
+
+```javascript
+// index.ts
+import '@monster-js/core/polyfill';
+import { defineComponent } '@monster-js/core';
+import { Greeting } from './greeting.component';
+
+defineComponent(Greeting);
+```
+
 :::note
 We should only import the polyfill once. It is recommended that we import the polyfill at the top of our entry point.
 :::
+
+## Define custom element component
+
+Custom element components can also be defined using `customElement.define`.
+
+Ex.
+
+```typescript
+import '@monster-js/core/polyfill';
+import { getSelector } '@monster-js/core';
+import { CustomButton } from './custom-button.component';
+
+customElement.define(getSelector(CustomButton), CustomButton, {
+    extends: 'button'
+});
+```
+
+or
+
+```typescript
+import '@monster-js/core/polyfill';
+import { defineComponent } '@monster-js/core';
+import { CustomButton } from './custom-button.component';
+
+defineComponent(CustomButton);
+```
 
 ## Global components
 
@@ -242,9 +279,11 @@ Ex.
 
 ```typescript
 import { GlobalComponents } from '@monster-js/core';
+import { Greeting } from './greeting.component';
 
 const gc = new GlobalComponents();
 gc.add('app-greeting');
+customElement.define(getSelector(Greeting), Greeting);
 ```
 
 Global components needs to be registered as global components first before we define the component using `customElements.define` to avoid issues.
