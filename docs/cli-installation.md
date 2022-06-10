@@ -8,6 +8,10 @@ slug: /cli-installation
 MonsterJS cli helps developers to create a working application out of the box.
 It has many useful commands like generating files for our MonsterJS app.
 
+:::caution
+It is recommended to use `node version 16` to use the CLI better. There are some issues for lower version.
+:::
+
 To install the cli we just need to run the following command:
 
 ```bash
