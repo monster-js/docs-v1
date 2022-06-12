@@ -33,6 +33,9 @@ module.exports = {
       'environment-variables.md',
       'known-issues.md'
     ],
+    'Testing': [
+      'component-testing.md'
+    ],
     CLI: [
       'cli-what-is-cli.md',
       'cli-installation.md',
