@@ -9,16 +9,6 @@ Testing our MonsterJS components can help us check that our components are worki
 MonsterJS provides a testing tools found in `@monster-js/tester` package.
 These tools can help us validate that all our components are performing as expected.
 
-## Installation
-
-To install this package we just need to run the following command:
-
-```bash
-npm install --save-dev @monster-js/tester
-```
-
-Now we can use the following testing tools provided by the package.
-
 ## createTester
 
 `import { createTester } from '@monster-js/tester'`
