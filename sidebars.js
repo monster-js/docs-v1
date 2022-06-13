@@ -33,7 +33,8 @@ module.exports = {
       'environment-variables.md',
       'known-issues.md'
     ],
-    'Testing': [
+    'Unit Testing': [
+      'intro-to-unit-testing.md',
       'component-testing.md'
     ],
     CLI: [
