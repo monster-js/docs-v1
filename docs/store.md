@@ -225,7 +225,7 @@ First is the type of data that `setPostLikesCount` action will accept.
 The second type is the type of the post state inside the store.
 
 There are two parameters for the `createAction` function.
-Fist is a string that describes the action.
+First is a string that describes the action.
 Second is the reducer function that returns the new state of the selected store.
 
 The reducer function has two arguments.
