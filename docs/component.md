@@ -209,12 +209,11 @@ That means we need to attach the component in a `<button></button>` element like
 ## Define component
 
 Component must be defined before we can use it.
-Since MonsterJS components are web components, we can use the `customElement.define` as long as we have the MonsterJS polyfill imported before defining the components.
+Since MonsterJS components are web components, we can use the `customElement.define`.
 
 Ex.
 ```javascript
 // index.ts
-import '@monster-js/core/polyfill';
 import { Greeting } from './greeting.component';
 
 customElement.define('app-greeting', Greeting);
@@ -222,7 +221,6 @@ customElement.define('app-greeting', Greeting);
 We can also use the selector defined in the `@Component` decorator.
 ```javascript
 // index.ts
-import '@monster-js/core/polyfill';
 import { getSelector } '@monster-js/core';
 import { Greeting } from './greeting.component';
 
@@ -233,16 +231,11 @@ or we can use the `defineComponent` function provided by the core module.
 
 ```javascript
 // index.ts
-import '@monster-js/core/polyfill';
 import { defineComponent } '@monster-js/core';
 import { Greeting } from './greeting.component';
 
 defineComponent(Greeting);
 ```
-
-:::note
-We should only import the polyfill once. It is recommended that we import the polyfill at the top of our entry point.
-:::
 
 ## Define custom element component
 
@@ -251,7 +244,6 @@ Custom element components can also be defined using `customElement.define`.
 Ex.
 
 ```typescript
-import '@monster-js/core/polyfill';
 import { getSelector } '@monster-js/core';
 import { CustomButton } from './custom-button.component';
 
@@ -263,7 +255,6 @@ customElement.define(getSelector(CustomButton), CustomButton, {
 or
 
 ```typescript
-import '@monster-js/core/polyfill';
 import { defineComponent } '@monster-js/core';
 import { CustomButton } from './custom-button.component';
 
