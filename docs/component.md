@@ -209,7 +209,7 @@ That means we need to attach the component in a `<button></button>` element like
 ## Define component
 
 Component must be defined before we can use it.
-Since MonsterJS components are web components, we can use the `customElement.define` as long as we have the MonsterJS polyfill imported before defining the components.
+Since MonsterJS components are web components, we can use the `customElement.define`.
 
 Ex.
 ```javascript
@@ -236,10 +236,6 @@ import { Greeting } from './greeting.component';
 
 defineComponent(Greeting);
 ```
-
-:::note
-We should only import the polyfill once. It is recommended that we import the polyfill at the top of our entry point.
-:::
 
 ## Define custom element component
 
